@@ -1,0 +1,16 @@
+*{
+    margin: auto;
+}
+img{
+    width: 5em;
+    height: 5em;
+}
+main{
+    margin: auto;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    box-shadow:aquamarine;
+    font-size: large;
+    font-weight:bold;
+    box-sizing: content-box;
+}
