@@ -1,0 +1,17 @@
+body{
+    display: grid;
+    border: 1px solid green;
+    grid-template-rows: repeat(3,1fr);
+}
+section{
+    display: grid;
+    border: 1px solid green;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows:repeat(4,1fr);
+}
+header,footer{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
