@@ -30,3 +30,11 @@ if (studyHours >= 5)
     {
         console.log("You need to focus");
 }
+
+console.log("Challenge 4, Odd or Even");
+const number = 17;
+if (number % 2 === 0){
+    console.log(`${number} is even`);
+}else {
+    console.log(`${number} is odd`);
+}
