@@ -1,6 +1,3 @@
- function calculateTotal(a,b,c){
-    return a+b+c;
- }
 
  const students = [
     {
@@ -20,4 +17,16 @@
         score: 45
     }
 ];
-console.log(students);
+function getGrade(student,position){
+   let student1 = student[position];
+   if (student1.score >= 80 && student1.score < 90){
+      return `${student1.name} --> ${student1.score} --> Excellent`;
+   }
+   else if (student1.score >= 90 ){{
+    return `${student1.name} --> ${student1.score} --> Outstanding`
+   }
+}
+
+for(let i=0;i<=3;i++){
+   console.log(getGrade(students,i));
+}
