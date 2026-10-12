@@ -29,6 +29,6 @@ function getGrade(student,position){
         return`${student1.name} --> ${student1.score} --> Needs Improvement`
    }
 }
-for(let i=0;i<=students.length-1;i++){
+for(let i=0; i<=students.length-1; i++){
    console.log(getGrade(students,i));
 }
