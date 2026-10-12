@@ -40,4 +40,20 @@ function displayStudents(students) {
         console.log(`${student.name} --> ${student.score}`);
     }
 }
+function getGrade(){
+    for (const student of students){
+        if (student.score > 80){
+            console.log(" Grade A");
+        }else if (student.score > 70 && student.score < 79){
+            console.log("Grade B");
+        }else if (student.score > 60 && student.score < 69){
+            console.log("Grade C");
+        }else if (student.score > 50 && student.score < 59){
+            console.log("Grade D");
+        }else if (student.score < 50){
+            console.log("Grade F");
+        }
+    }
+}
 displayStudents(students);
+getGrade(students);
