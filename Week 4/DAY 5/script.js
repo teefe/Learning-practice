@@ -5,7 +5,7 @@ const students = [
         age: 21,
         course: "Software Engineering",
         score: 85,
-        attendance: 90
+        attendance: "90%"
     },
 
     {
@@ -14,7 +14,7 @@ const students = [
         age: 22,
         course: "Computer Science",
         score: 92,
-        attendance: 95
+        attendance: "95%"
     },
 
     {
@@ -23,7 +23,7 @@ const students = [
         age: 20,
         course: "Information Technology",
         score: 68,
-        attendance: 72
+        attendance: "72%"
     },
 
     {
@@ -32,28 +32,49 @@ const students = [
         age: 23,
         course: "Software Engineering",
         score: 77,
-        attendance: 88
+        attendance: "88%"
     }
 ];
+
 function displayStudents(students) {
     for (const student of students){
         console.log(`${student.name} --> ${student.score}`);
     }
 }
+
 function getGrade(){
     for (const student of students){
         if (student.score > 80){
-            console.log(" Grade A");
+            student.grade ="A";
         }else if (student.score > 70 && student.score < 79){
-            console.log("Grade B");
+            student.grade ="B";
         }else if (student.score > 60 && student.score < 69){
-            console.log("Grade C");
+            student.grade ="C";
         }else if (student.score > 50 && student.score < 59){
-            console.log("Grade D");
+            student.grade ="D";
         }else if (student.score < 50){
-            console.log("Grade F");
+            student.grade ="F";
         }
     }
 }
-displayStudents(students);
+function genereateStudentReport(student){
+    for (const student of students){
+       for (const [key,value] of Object.entries(student)){
+            console.log(`${key} : ${value}`);
+       }
+    }
+}
+function findStudentById(students,id){
+    for (const student of students){
+        for (const [key,value] of Object.entries(student)){
+            if (value === id){
+                return student
+            }
+        }
+    }
+}
+
+//displayStudents(students);
 getGrade(students);
+// genereateStudentReport(students);
+console.log(findStudentById(students,3));
