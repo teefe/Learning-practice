@@ -68,7 +68,7 @@ function findStudentById(students,id){
     for (const student of students){
         for (const [key,value] of Object.entries(student)){
             if (value === id){
-                return student
+                return student;
             }
         }
     }
