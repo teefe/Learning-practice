@@ -57,7 +57,7 @@ function getGrade(){
         }
     }
 }
-function genereateStudentReport(student){
+function genereateStudentReport(students){
     for (const student of students){
        for (const [key,value] of Object.entries(student)){
             console.log(`${key} : ${value}`);
@@ -73,8 +73,25 @@ function findStudentById(students,id){
         }
     }
 }
+function getTopStudent(students){
+    var topStudent = {};
+    for (const student of students){
+        for (const [key,value] of Object.entries(student)){
+            if (value > topStudent.score){
+                topStudent = student; 
+            }
 
-//displayStudents(students);
-getGrade(students);
+        }
+    }
+topStudent;
+}
+
+// displayStudents(students);
+// getGrade(students);
 // genereateStudentReport(students);
-console.log(findStudentById(students,3));
+// console.log(findStudentById(students,3));
+// getTopStudent(students);
+const input = document.querySelector("#nameInput"); 
+const output = document.querySelector("#output");
+input.addEventListener("input", function () {
+output.textContent = input.value; });
